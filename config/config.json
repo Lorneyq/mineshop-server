@@ -1,0 +1,26 @@
+{
+  "development": {
+    "username": "freedb_Lorneyq",
+    "password": "n24Wkt@!9k5$erf",
+    "database": "freedb_Mineshop",
+    "host": "sql.freedb.tech",
+    "dialect": "mysql",
+    "port": 3306
+  },
+  "test": {
+    "username": "freedb_Lorneyq",
+    "password": "n24Wkt@!9k5$erf",
+    "database": "freedb_Mineshop",
+    "host": "sql.freedb.tech",
+    "dialect": "mysql",
+    "port": 3306
+  },
+  "production": {
+    "username": "freedb_Lorneyq",
+    "password": "n24Wkt@!9k5$erf",
+    "database": "freedb_Mineshop",
+    "host": "sql.freedb.tech",
+    "dialect": "mysql",
+    "port": 3306
+  }
+}
