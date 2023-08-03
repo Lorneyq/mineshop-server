@@ -15,6 +15,7 @@ export default (sequelize, DataTypes) => {
     {
       name: DataTypes.STRING,
       price: DataTypes.DECIMAL,
+      old_price: DataTypes.DECIMAL,
       vendor_code: DataTypes.STRING,
       description: DataTypes.STRING,
       category: DataTypes.STRING,

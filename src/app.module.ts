@@ -6,7 +6,6 @@ import { databaseConfig } from './config/configuration';
 import { SequelizeConfigService } from './config/sequelizeConfig.service';
 import { FavoritesModule } from './favorites/favorites.module';
 import { ProductsModule } from './products/products.module';
-import { ShoppingCartModule } from './shopping-cart/shopping-cart.module';
 import { UsersModule } from './users/users.module';
 
 @Module({
@@ -21,7 +20,6 @@ import { UsersModule } from './users/users.module';
     UsersModule,
     AuthModule,
     ProductsModule,
-    ShoppingCartModule,
     FavoritesModule,
   ],
 })
