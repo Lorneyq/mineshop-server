@@ -8,10 +8,11 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.use(
     session({
-      secret: 'keyword',
+      secret: 'iriU4/ Zn*FlzG>_LMelO4hY4oBU4J=!',
       resave: false,
       saveUninitialized: false,
       cookie: {
+        httpOnly: true,
         secure: true,
         sameSite: 'none',
       },
