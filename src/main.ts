@@ -25,6 +25,7 @@ async function bootstrap() {
     credentials: true,
     origin: [
       'http://localhost:3001',
+      'https://mineshop.up.railway.app',
       'https://mineshop.vercel.app',
       'https://mineshop-client-lorneyq.vercel.app',
       'https://mineshop-client-git-main-lorneyq.vercel.app',
