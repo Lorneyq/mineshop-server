@@ -11,11 +11,6 @@ async function bootstrap() {
       secret: 'iriU4/ Zn*FlzG>_LMelO4hY4oBU4J=!',
       resave: false,
       saveUninitialized: false,
-      cookie: {
-        httpOnly: true,
-        secure: true,
-        sameSite: 'lax',
-      },
     }),
   );
   app.use(passport.initialize());
