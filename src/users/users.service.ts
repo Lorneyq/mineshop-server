@@ -19,7 +19,7 @@ export class UsersService {
 
   async create(
     createUserDto: CreateUserDto,
-  ): Promise<User | { warningMessage: string }> {
+  ): Promise<User | { warningMessage: string; warningReason: string }> {
     const user = new User();
     const existingByUserName = await this.findOne({
       where: { username: createUserDto.username },
@@ -30,11 +30,17 @@ export class UsersService {
     });
 
     if (existingByUserName) {
-      return { warningMessage: 'A user with this username already exists' };
+      return {
+        warningMessage: 'A user with this username already exists',
+        warningReason: 'username',
+      };
     }
 
     if (existingByEmail) {
-      return { warningMessage: 'A user with this email already exists' };
+      return {
+        warningMessage: 'A user with this email already exists',
+        warningReason: 'email',
+      };
     }
 
     const hashedPassword = await bcrypt.hash(createUserDto.password, 10);
