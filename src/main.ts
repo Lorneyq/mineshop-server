@@ -11,6 +11,9 @@ async function bootstrap() {
       secret: 'keyword',
       resave: false,
       saveUninitialized: false,
+      cookie: {
+        secure: true,
+      },
     }),
   );
   app.use(passport.initialize());
@@ -18,7 +21,12 @@ async function bootstrap() {
 
   app.enableCors({
     credentials: true,
-    origin: ['http://localhost:3001', 'https://mineshop.vercel.app'],
+    origin: [
+      'http://localhost:3001',
+      'https://mineshop.vercel.app',
+      'https://mineshop-client-lorneyq.vercel.app',
+      'https://mineshop-client-git-main-lorneyq.vercel.app',
+    ],
   });
 
   const config = new DocumentBuilder()
