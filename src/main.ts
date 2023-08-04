@@ -13,6 +13,7 @@ async function bootstrap() {
       saveUninitialized: false,
       cookie: {
         secure: true,
+        sameSite: 'none',
       },
     }),
   );
