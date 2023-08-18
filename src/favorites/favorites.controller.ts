@@ -17,14 +17,12 @@ export class FavoritesController {
   constructor(private readonly favoritesService: FavoritesService) {}
 
   @ApiOkResponse({ type: [GetAllResponse] })
-  @UseGuards(AuthenticatedGuard)
   @Get(':id')
   getAll(@Param('id') userId: string) {
     return this.favoritesService.findAll(userId);
   }
 
   @ApiOkResponse({ type: AddToFavoritesResponse })
-  @UseGuards(AuthenticatedGuard)
   @Post('/add')
   AddToFavorites(@Body() addToFavoritesDto: AddToFavoritesDto) {
     return this.favoritesService.add(addToFavoritesDto);
