@@ -6,7 +6,7 @@ module.exports = {
     return queryInterface.bulkInsert('Products', [
       {
         name: '',
-        price: 10.00,
+        price: 10,
         vendor_code: '',
         description: '',
         category: 'Toys',

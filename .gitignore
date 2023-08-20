@@ -1,5 +1,11 @@
 # compiled output
 /dist
+/migrations
+
+.env
+.eslintrc.js
+.prettierrc
+vercel.json
 /node_modules
 
 # Logs

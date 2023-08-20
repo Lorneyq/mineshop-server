@@ -8,7 +8,7 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.use(
     session({
-      secret: 'iriU4/ Zn*FlzG>_LMelO4hY4oBU4J=!',
+      secret: 'VERY_SECRET',
       resave: false,
       saveUninitialized: false,
     }),
@@ -18,14 +18,7 @@ async function bootstrap() {
 
   app.enableCors({
     credentials: true,
-    origin: [
-      'http://localhost:3001',
-      'https://mineshop.onrender.com',
-      'https://mineshop.up.railway.app',
-      'https://mineshop.vercel.app',
-      'https://mineshop-client-lorneyq.vercel.app',
-      'https://mineshop-client-git-main-lorneyq.vercel.app',
-    ],
+    origin: [process.env.CLIENT_ADDRESS],
   });
 
   const config = new DocumentBuilder()
