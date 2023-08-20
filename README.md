@@ -33,7 +33,7 @@ yarn install
 5. Start the server, and when it is running, update the Database, you will have the folders you need.
 
 ```bash
-yarn start
+yarn start:dev
 ```
 
 6. To test the full functionality of the project, you should fill the database with information. You can do it manually, or you can use the [faker library](https://npmjs.com/package/@faker-js/faker).
